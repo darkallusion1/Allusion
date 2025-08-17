@@ -1,3 +1,15 @@
-create Repos call : Allusion
-in Allusion create text file that name : Loader.lua
-put this script in and save and click raw (view raw file) and send me the rawgithub link
+if not game:IsLoaded() then
+    repeat task.wait(3) until game:IsLoaded()
+end
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local PlaceId = game.PlaceId
+local Games = {
+    [PlaceIdHere] = "ScriptURL HERE",
+}
+local FoundGame = Games[PlaceId] or false
+if FoundGame then
+    return loadstring(game:HttpGet(FoundGame))
+else
+    return false
+end
