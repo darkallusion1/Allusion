@@ -5,7 +5,7 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 local PlaceId = game.PlaceId
 local Games = {
-    [PlaceIdHere] = "ScriptURL HERE",
+    [0] = "",
 }
 local FoundGame = Games[PlaceId] or false
 if FoundGame then
@@ -13,3 +13,4 @@ if FoundGame then
 else
     return false
 end
+
